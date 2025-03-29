@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GardaRibs - Alquiler de Semirrígidos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Hero Section con Video -->
+<section class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="/img/8436291-uhd_4096_2160_25fps.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
+    <!-- Navbar dentro del Hero -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">GardaRibs</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                ☰
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>GardaRibs 🚤</h1>
+        <p>Explora el Lago di Garda con nuestros semirrígidos.</p>
+        <a href="#reservas" class="btn">Reservar Ahora</a>
+    </div>
+</section>
+
+<!-- Servicios con Carrusel -->
+<section id="servicios" class="servicios-carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="img/istockphoto-2164792342-1024x1024.jpg" alt="Alquiler de Semirrígidos">
+        </div>
+        <div class="carousel-slide">
+            <img src="img/istockphoto-2183049517-1024x1024.jpg" alt="Tours Guiados">
+        </div>
+        <div class="carousel-slide">
+            <img src="img/istockphoto-2164792342-1024x1024.jpg" alt="Experiencias Privadas">
+        </div>
+    </div>
+
+    <div class="servicios-content">
+        <h2>Nuestros Servicios</h2>
+        <ul>
+            <li>Alquiler de Semirrígidos</li>
+            <li>Tours Guiados</li>
+            <li>Experiencias Privadas</li>
+        </ul>
+    </div>
+</section>
+
+  <!-- Reservas con Video -->
+  <section id="reservas" class="reservas-video">
+    <video autoplay loop muted playsinline class="reservas-bg-video">
+        <source src="/img/2711109-uhd_3840_2160_24fps.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+    
+    <div class="reservas-content">
+        <h2>Reserva Tu Barco</h2>
+        <form action="https://formspree.io/f/tuemail" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Detalles de la reserva"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Contacto -->
+  <!-- Footer Completo -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Sección de Contacto -->
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>Email: <a href="mailto:info@gardaribs.com">info@gardaribs.com</a></p>
+            <p>Tel: <a href="tel:+393331234567">+39 333 123 4567</a></p>
+            <p>Ubicación: Lago di Garda, Italia</p>
+        </div>
+
+
+        <!-- Redes Sociales -->
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gardaribs" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/gardaribs" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
+                <a href="https://wa.me/393331234567" target="_blank"><img src="img/whatsapp.svg" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Derechos Reservados -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 GardaRibs. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
