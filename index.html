@@ -1,111 +1,187 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GardaRibs - Alquiler de Semirrígidos</title>
+    <title>GardaRibs - Esplora il Lago di Garda</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Hero Section con Video -->
-<section class="hero">
-    <video autoplay loop muted playsinline class="hero-video">
-        <source src="/img/8436291-uhd_4096_2160_25fps.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-    </video>
-
-    <!-- Navbar dentro del Hero -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">GardaRibs</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#reservas">Reservas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servizi</a></li>
+                <li><a href="#reserva">Prenota</a></li>
+                <li><a href="#contacto">Contatto</a></li>
             </ul>
-            <div class="menu-icon" onclick="toggleMenu()">
-                ☰
-            </div>
         </div>
     </nav>
 
-    <div class="hero-content">
-        <h1>GardaRibs 🚤</h1>
-        <p>Explora el Lago di Garda con nuestros semirrígidos.</p>
-        <a href="#reservas" class="btn">Reservar Ahora</a>
-    </div>
-</section>
-
-<!-- Servicios con Carrusel -->
-<section id="servicios" class="servicios-carousel">
-    <div class="carousel-container">
-        <div class="carousel-slide">
-            <img src="img/istockphoto-2164792342-1024x1024.jpg" alt="Alquiler de Semirrígidos">
-        </div>
-        <div class="carousel-slide">
-            <img src="img/istockphoto-2183049517-1024x1024.jpg" alt="Tours Guiados">
-        </div>
-        <div class="carousel-slide">
-            <img src="img/istockphoto-2164792342-1024x1024.jpg" alt="Experiencias Privadas">
-        </div>
-    </div>
-
-    <div class="servicios-content">
-        <h2>Nuestros Servicios</h2>
-        <ul>
-            <li>Alquiler de Semirrígidos</li>
-            <li>Tours Guiados</li>
-            <li>Experiencias Privadas</li>
-        </ul>
-    </div>
-</section>
-
-  <!-- Reservas con Video -->
-  <section id="reservas" class="reservas-video">
-    <video autoplay loop muted playsinline class="reservas-bg-video">
+   <!-- Hero Section con Video -->
+<section class="hero">
+    <!-- Video de Fondo -->
+    <video autoplay loop muted playsinline class="hero-video">
         <source src="/img/2711109-uhd_3840_2160_24fps.mp4" type="video/mp4">
         Tu navegador no soporta videos HTML5.
     </video>
-    
-    <div class="reservas-content">
-        <h2>Reserva Tu Barco</h2>
-        <form action="https://formspree.io/f/tuemail" method="POST">
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="mensaje" placeholder="Detalles de la reserva"></textarea>
-            <button type="submit">Enviar</button>
+
+    <!-- Contenido del Hero -->
+    <div class="hero-content">
+        <h1>Esplora il Lago di Garda a Tuo Ritmo 🚤</h1>
+        <p>Goditi il Lago di Garda in totale libertà. Scegli il tuo itinerario e lascia che l’avventura inizi!</p>
+        <a href="#reserva" class="btn">Prenota Ora</a>
+    </div>
+</section>
+
+    <!-- Sección de Servicios -->
+<section id="servicios" class="servicios">
+    <h2>I Nostri Servizi</h2>
+
+    <div class="servicio">
+        <div class="servicio-texto">
+            <h3>Alquiler de Semirrígidos</h3>
+            <p>Noleggia uno dei nostri gommoni e scopri il Lago di Garda in totale autonomia.</p>
+        </div>
+        <div class="servicio-imagen">
+            <img src="img/istockphoto-2183049517-1024x1024.jpg" alt="Alquiler de Semirrígidos">
+        </div>
+    </div>
+
+    <div class="servicio">
+        <div class="servicio-texto">
+            <h3>Tour Guidati Privati</h3>
+            <p>Esplora i segreti del lago con una guida esperta. Scopri angoli nascosti e storie locali.</p>
+        </div>
+        <div class="servicio-imagen">
+            <img src="img/istockphoto-2183049517-1024x1024.jpg" alt="Tour Guiados">
+        </div>
+    </div>
+
+    <div class="servicio">
+        <div class="servicio-texto">
+            <h3>Esperienze Personalizzate</h3>
+            <p>Crea la tua avventura ideale: picnic sull’acqua, snorkeling o relax al tramonto.</p>
+        </div>
+        <div class="servicio-imagen">
+            <img src="img/istockphoto-2183049517-1024x1024.jpg" alt="Experiencias Privadas">
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Reservas -->
+<section id="reserva" class="reserva">
+    <div class="reserva-container">
+        <!-- Texto de Reservas -->
+        <div class="reserva-info">
+            <h2>Prenota la Tua Avventura</h2>
+            <p>Compila il modulo per prenotare la tua esperienza sul Lago di Garda. Ti contatteremo al più presto!</p>
+        </div>
+
+        <!-- Formulario de Reserva -->
+        <form action="https://formspree.io/f/tu-email" method="POST" class="reserva-form">
+            <label for="nombre">Nome</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Commenti</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit" class="btn-reserva">Invia</button>
         </form>
     </div>
 </section>
 
-    <!-- Contacto -->
-  <!-- Footer Completo -->
-<footer class="footer">
-    <div class="footer-container">
-        <!-- Sección de Contacto -->
-        <div class="footer-section">
-            <h3>Contacto</h3>
-            <p>Email: <a href="mailto:info@gardaribs.com">info@gardaribs.com</a></p>
-            <p>Tel: <a href="tel:+393331234567">+39 333 123 4567</a></p>
-            <p>Ubicación: Lago di Garda, Italia</p>
+<!-- Sección de Contacto + Ubicación -->
+<section id="contacto" class="contacto">
+    <div class="contacto-container">
+        <!-- Información de Contacto -->
+        <div class="contacto-info">
+            <h2>Contattaci</h2>
+            <p>Hai domande o vuoi prenotare? Contattaci subito!</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:info@gardaribs.com">info@gardaribs.com</a></li>
+                <li><strong>Telefono:</strong> <a href="tel:+393331234567">+39 333 123 4567</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/393331234567" target="_blank">Chatta con noi!</a></li>
+            </ul>
         </div>
 
+        <!-- Formulario de Contacto -->
+        <form action="https://formspree.io/f/tu-email" method="POST" class="contacto-form">
+            <label for="nombre">Nome</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Messaggio</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit" class="btn-contacto">Invia Messaggio</button>
+        </form>
+    </div>
+
+    <!-- Mapa de Ubicación -->
+    <div class="mapa-container">
+        <h2>Dove Ci Troviamo</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=..." 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Información de Contacto -->
+        <div class="footer-section">
+            <h3>Contatti</h3>
+            <p>Email: <a href="mailto:info@gardaribs.com">info@gardaribs.com</a></p>
+            <p>Telefono: <a href="tel:+393331234567">+39 333 123 4567</a></p>
+            <p>WhatsApp: <a href="https://wa.me/393331234567" target="_blank">Chatta con noi!</a></p>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="footer-section">
+            <h3>Link Utili</h3>
+            <ul>
+                <li><a href="#servicios">Servizi</a></li>
+                <li><a href="#reserva">Prenota</a></li>
+                <li><a href="#contacto">Contatti</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
 
         <!-- Redes Sociales -->
         <div class="footer-section">
-            <h3>Síguenos</h3>
+            <h3>Seguici</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/gardaribs" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.facebook.com/gardaribs" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
-                <a href="https://wa.me/393331234567" target="_blank"><img src="img/whatsapp.svg" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com/gardaribs" target="_blank">
+                    <img src="img/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/gardaribs" target="_blank">
+                    <img src="img/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://wa.me/393331234567" target="_blank">
+                    <img src="img/whatsapp.svg" alt="WhatsApp">
+                </a>
             </div>
         </div>
     </div>
 
     <!-- Derechos Reservados -->
     <div class="footer-bottom">
-        <p>&copy; 2025 GardaRibs. Todos los derechos reservados.</p>
+        <p>&copy; 2025 GardaRibs. Tutti i diritti riservati.</p>
     </div>
 </footer>
 
