@@ -20,3 +20,11 @@ document.addEventListener("scroll", () => {
         }
     });
 });
+
+// Reducir la velocidad de reproducción del video del Hero
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.querySelector(".hero-video");
+    if (video) {
+        video.playbackRate = 0.5; // Ajustar el valor para cambiar la velocidad
+    }
+});
