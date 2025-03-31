@@ -16,32 +16,43 @@
     </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">GardaRibs</a>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servizi</a></li>
-                <li><a href="#reserva">Prenota</a></li>
-                <li><a href="#contacto">Contatto</a></li>
-            </ul>
-        </div>
-    </nav>
+ <!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo" data-key="nav_logo">GardaRibs</a>
+        <ul class="nav-links">
+            <li><a href="#servicios" data-key="nav_services">Servizi</a></li>
+            <li><a href="#reserva" data-key="nav_booking">Prenota</a></li>
+            <li><a href="#contacto" data-key="nav_contact">Contatto</a></li>
+        </ul>
 
-   <!-- Hero Section con Video -->
+        <!-- Selector de Idioma -->
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage()">
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="pt">🇧🇷 Português</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section con Video -->
 <section class="hero">
     <!-- Video de Fondo -->
     <video autoplay loop muted playsinline class="hero-video">
-       
-        <source src="/img/1181911-uhd_4096_2160_24fps.mp4" type="video/mp4">
+        <source src="/img/8436291-uhd_4096_2160_25fps.mp4" type="video/mp4">
         Tu navegador no soporta videos HTML5.
     </video>
 
     <!-- Contenido del Hero -->
     <div class="hero-content">
-        <h1>Esplora il Lago di Garda a Tuo Ritmo</h1>
-        <p>Goditi il Lago di Garda in totale libertà. Scegli il tuo itinerario e lascia che l’avventura inizi!</p>
-        <a href="#reserva" class="btn">Prenota Ora</a>
+        <h1 data-key="hero_title">Esplora il Lago di Garda a Tuo Ritmo</h1>
+        <p data-key="hero_desc">Goditi il Lago di Garda in totale libertà. Scegli il tuo itinerario e lascia che l’avventura inizi!</p>
+        <a href="#reserva" class="btn" data-key="hero_cta">Prenota Ora</a>
     </div>
 </section>
 
@@ -237,5 +248,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<!-- Incluir el archivo lang.js -->
+<script src="js/lang.js"></script>
 </body>
 </html>

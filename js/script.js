@@ -28,3 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
         video.playbackRate = 0.5; // Ajustar el valor para cambiar la velocidad
     }
 });
+

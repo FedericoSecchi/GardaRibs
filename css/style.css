@@ -23,7 +23,7 @@ body {
 
 .navbar {
     background-color: #0e0f18; /* Fondo oscuro */
-    height: 20px; /* Altura fija */
+    height: 30px; /* Altura fija */
     padding: 20px 60px; /* Espaciado */
     position: fixed;
     width: 100%;
@@ -81,29 +81,39 @@ body {
     background-color: #007BFF;
     border-radius: 5px;
 }
-/* Estilo del menú */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+
+/* Estilos del Selector de Idioma */
+.language-selector {
+    margin-left: 20px;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
+#language {
     padding: 5px 10px;
-    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
-.nav-links a:hover {
-    background-color: #007BFF;
-    border-radius: 5px;
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .language-selector {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #language {
+        width: 100%;
+    }
 }
 
 /* =============================
