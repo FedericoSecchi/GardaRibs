@@ -318,72 +318,95 @@ body {
 /* =============================
    🎟️ Sección de Reservas
 ============================= */
+
 .reserva {
-    background: url('../img/hero.jpg') no-repeat center center/cover;
-    padding: 80px 20px;
+    position: relative;
+    padding: 60px 20px;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden; /* Evita desbordamientos */
 }
 
-.reserva-container {
-    background: rgba(14, 15, 24, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 900px;
+/* Imagen de Fondo */
+.reserva-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Contenedor Principal */
+.reserva-container {
+    width: 1121px; /* Ancho según Figma */
+    height: 560px; /* Alto según Figma */
+    background-color: #13192C;
+    margin: 0 auto;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    flex-wrap: wrap;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Texto de Reserva */
-.reserva-info {
-    max-width: 40%;
-}
-
+/* Información de Reserva */
 .reserva-info h2 {
     font-size: 28px;
     margin-bottom: 10px;
 }
 
+/* Línea Blanca */
+.linea-blanca {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+/* Texto debajo de la línea */
 .reserva-info p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.5;
+    color: #ccc;
 }
 
-/* Formulario de Reserva */
-.reserva-form {
-    max-width: 50%;
-    width: 100%;
+/* Formulario */
+.reserva-form form {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.reserva-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
+/* Campos del Formulario */
 .reserva-form input,
 .reserva-form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    outline: none;
 }
 
-/* Botón Enviar */
+/* Placeholder */
+.reserva-form input::placeholder,
+.reserva-form textarea::placeholder {
+    color: #cccccc;
+}
+
+/* Botón */
 .btn-reserva {
     background-color: #007BFF;
-    padding: 12px 20px;
     color: white;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 
 .btn-reserva:hover {
@@ -393,15 +416,11 @@ body {
 /* Responsive para móviles */
 @media (max-width: 768px) {
     .reserva-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .reserva-info, .reserva-form {
-        max-width: 100%;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
     }
 }
-
 /* =============================
    📍 Sección de Contacto
 ============================= */

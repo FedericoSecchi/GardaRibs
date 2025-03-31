@@ -84,31 +84,37 @@
     </div>
 </section>
 
-<!-- Sección de Reservas -->
+<!-- Sección de Reserva -->
 <section id="reserva" class="reserva">
+    <!-- Imagen de Fondo -->
+    <img src="img/istockphoto-2164792342-1024x1024.jpg" alt="Lago di Garda" class="reserva-bg">
+
     <div class="reserva-container">
-        <!-- Texto de Reservas -->
+        <!-- Información de Reserva -->
         <div class="reserva-info">
-            <h2>Prenota la Tua Avventura</h2>
-            <p>Compila il modulo per prenotare la tua esperienza sul Lago di Garda. Ti contatteremo al più presto!</p>
+            <h2>Reserva</h2>
+            <div class="linea-blanca"></div>
+            <p>Goditi il Lago di Garda in totale libertà. Scegli il tuo itinerario e lascia che l’avventura inizi!</p>
         </div>
+        
+        <!-- Formulario -->
+        <div class="reserva-form">
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Inserisci il tuo nome" required>
 
-        <!-- Formulario de Reserva -->
-        <form action="https://formspree.io/f/tu-email" method="POST" class="reserva-form">
-            <label for="nombre">Nome</label>
-            <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" placeholder="Inserisci la tua email" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Aggiungi un commento"></textarea>
 
-            <label for="mensaje">Commenti</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <button type="submit" class="btn-reserva">Invia</button>
-        </form>
+                <!-- Botón de Enviar -->
+                <button type="submit" class="btn-reserva">Invia</button>
+            </form>
+        </div>
     </div>
 </section>
-
 <!-- Sección de Contacto + Ubicación -->
 <section id="contacto" class="contacto">
     <div class="contacto-container">
