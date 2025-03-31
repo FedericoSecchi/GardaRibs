@@ -626,6 +626,7 @@ body {
         width: 80px;
     }
 }
+
 /* =============================
    ⚓️ Footer
 ============================= */
@@ -639,25 +640,31 @@ body {
 /* Contenedor del Footer */
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Sección del Footer */
 .footer-section {
     text-align: left;
-    padding: 10px;
 }
 
+/* Alinear Seguici a la derecha */
+.social-section {
+    text-align: right;
+}
+
+/* Sección del Footer */
 .footer-section h3 {
     margin-bottom: 15px;
     color: #f1f1f1;
     font-size: 18px;
 }
 
-/* Estilo para enlaces */
+/* Enlaces del Footer */
 .footer-section a {
     color: #ccc;
     text-decoration: none;
@@ -668,36 +675,28 @@ body {
     color: #007BFF;
 }
 
-/* Lista de enlaces rápidos */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
 /* Iconos de Redes Sociales */
 .social-icons {
     display: flex;
+    justify-content: flex-end; /* Mover los iconos a la derecha */
     gap: 15px;
-    justify-content: left;
     margin-top: 10px;
 }
 
-.social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: 0.3s;
+/* Estilos para iconos */
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s, transform 0.3s ease;
 }
 
-.social-icons a img:hover {
+/* Cambia el color al pasar el mouse */
+.social-icons a:hover {
+    color: #007BFF;
     transform: scale(1.1);
 }
 
-/* Derechos Reservados */
+/* Línea Inferior */
 .footer-bottom {
     margin-top: 20px;
     border-top: 1px solid #444;
@@ -711,6 +710,11 @@ body {
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .social-section {
+        text-align: center;
+        margin-top: 20px;
     }
 
     .social-icons {
