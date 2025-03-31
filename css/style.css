@@ -427,100 +427,133 @@ body {
     }
 }
 /* =============================
-   📍 Sección de Contacto
+   📩 Sección de Contacto
 ============================= */
 .contacto {
-    background-color: #f9f9f9;
-    padding: 80px 20px;
-    text-align: center;
+    background-color: #0e0f18;
+    padding: 60px 20px;
+    color: white;
 }
 
-/* Contenedor principal */
+/* Contenedor de Contacto */
 .contacto-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Información de Contacto */
-.contacto-info {
-    max-width: 45%;
-    text-align: left;
-}
-
 .contacto-info h2 {
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .contacto-info p {
     font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-.contacto-info ul {
-    list-style: none;
-    padding: 0;
-    line-height: 2;
-}
-
-.contacto-info li {
+/* Detalles de Contacto */
+.contacto-detalles p {
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
-.contacto-info a {
+.contacto-detalles a {
     color: #007BFF;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.contacto-info a:hover {
-    text-decoration: underline;
+.contacto-detalles a:hover {
+    color: #0056b3;
+}
+
+/* Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007BFF;
+    transform: scale(1.1);
 }
 
 /* Formulario de Contacto */
-.contacto-form {
-    max-width: 45%;
-    width: 100%;
+.contacto-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Campos del Formulario - Líneas Blancas */
+.contacto-form form {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    gap: 20px;
 }
 
 .contacto-form label {
+    font-size: 16px;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
+/* Líneas blancas en lugar de recuadros */
 .contacto-form input,
 .contacto-form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    outline: none;
 }
 
-/* Botón de Contacto */
+/* Placeholder en color más claro */
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+    color: #cccccc;
+}
+
+/* Botón */
 .btn-contacto {
     background-color: #007BFF;
-    padding: 12px 20px;
     color: white;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 
 .btn-contacto:hover {
     background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 /* =============================
